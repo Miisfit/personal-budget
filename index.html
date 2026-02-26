@@ -6,37 +6,45 @@
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Budget Dashboard</h1>
+  <h1>Budget Dashboard</h1>
 
-    <div class="card">
-      <h2>Paycheck</h2>
-      <input type="number" id="paycheck" placeholder="Enter paycheck">
-    </div>
-
-    <div class="card">
-      <h2>Upcoming Bills</h2>
-      <ul id="billsList"></ul>
-      <input type="text" id="newBill" placeholder="Bill name">
-      <input type="number" id="billAmount" placeholder="Amount">
-      <button onclick="addBill()">Add</button>
-    </div>
-
-    <div class="card">
-      <h2>Future Purchases</h2>
-      <ul id="purchaseList"></ul>
-      <input type="text" id="newPurchase" placeholder="Item name">
-      <input type="number" id="purchaseAmount" placeholder="Amount">
-      <button onclick="addPurchase()">Add</button>
-    </div>
-
-    <div class="card">
-      <h2>Savings Goal</h2>
-      <input type="number" id="savingsGoal" placeholder="Goal amount">
-    </div>
-
+  <div class="card">
+    <h2>Paycheck</h2>
+    <input type="number" id="paycheck" placeholder="Enter paycheck">
   </div>
+
+  <div class="card balance-card">
+    <h2>Remaining Balance</h2>
+    <div id="remaining">$0</div>
+  </div>
+
+  <div class="card">
+    <h2>Upcoming Bills</h2>
+    <ul id="billsList"></ul>
+    <input type="text" id="newBill" placeholder="Bill name">
+    <input type="number" id="billAmount" placeholder="Amount">
+    <button onclick="addItem('bills')">Add Bill</button>
+  </div>
+
+  <div class="card">
+    <h2>Future Purchases</h2>
+    <ul id="purchaseList"></ul>
+    <input type="text" id="newPurchase" placeholder="Item name">
+    <input type="number" id="purchaseAmount" placeholder="Amount">
+    <button onclick="addItem('purchases')">Add Purchase</button>
+  </div>
+
+  <div class="card">
+    <h2>Savings Goal</h2>
+    <input type="number" id="savingsGoal" placeholder="Goal amount">
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+  </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
