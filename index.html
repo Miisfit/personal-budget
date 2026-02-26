@@ -3,12 +3,18 @@
 <head>
   <title>Budget</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
 <div class="container">
 
   <h1>Budget Dashboard</h1>
+
+  <div class="card">
+    <h2>Month</h2>
+    <input type="month" id="monthPicker">
+  </div>
 
   <div class="card">
     <h2>Paycheck</h2>
@@ -42,6 +48,11 @@
     <div class="progress-bar">
       <div id="progress"></div>
     </div>
+  </div>
+
+  <div class="card">
+    <h2>Monthly Breakdown</h2>
+    <canvas id="budgetChart"></canvas>
   </div>
 
 </div>
