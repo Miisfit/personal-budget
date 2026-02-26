@@ -8,13 +8,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   padding: 40px 20px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 40px;
+  animation: fadeIn 0.6s ease;
 }
 
 .card {
@@ -23,6 +24,12 @@ h1 {
   margin-bottom: 25px;
   border-radius: 18px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  animation: fadeUp 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 .balance-card #remaining {
@@ -37,6 +44,7 @@ input {
   border-radius: 12px;
   border: 1px solid #e5e5e7;
   outline: none;
+  transition: 0.2s;
 }
 
 input:focus {
@@ -51,6 +59,7 @@ button {
   background: #0071e3;
   color: white;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
@@ -72,13 +81,17 @@ li {
   justify-content: space-between;
   align-items: center;
   cursor: grab;
+  transition: 0.2s;
+}
+
+li:hover {
+  background: #f1f1f4;
 }
 
 .delete-btn {
   background: none;
   border: none;
   color: #ff3b30;
-  font-size: 14px;
   cursor: pointer;
 }
 
@@ -94,5 +107,15 @@ li {
   height: 100%;
   width: 0%;
   background: #34c759;
-  transition: 0.3s;
+  transition: 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
