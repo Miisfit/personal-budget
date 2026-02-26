@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kevin's Budget</title>
+  <title>Budget</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>My Budget Dashboard</h1>
+  <div class="container">
 
-  <div class="section">
-    <h2>Paycheck</h2>
-    <input type="number" id="paycheck" placeholder="Enter paycheck amount">
-  </div>
+    <h1>Budget Dashboard</h1>
 
-  <div class="section">
-    <h2>Upcoming Bills</h2>
-    <ul id="billsList"></ul>
-    <input type="text" id="newBill" placeholder="New bill name">
-    <input type="number" id="billAmount" placeholder="Amount">
-    <button onclick="addBill()">Add Bill</button>
-  </div>
+    <div class="card">
+      <h2>Paycheck</h2>
+      <input type="number" id="paycheck" placeholder="Enter paycheck">
+    </div>
 
-  <div class="section">
-    <h2>Future Purchases</h2>
-    <ul id="purchaseList"></ul>
-    <input type="text" id="newPurchase" placeholder="Item name">
-    <input type="number" id="purchaseAmount" placeholder="Amount">
-    <button onclick="addPurchase()">Add Purchase</button>
-  </div>
+    <div class="card">
+      <h2>Upcoming Bills</h2>
+      <ul id="billsList"></ul>
+      <input type="text" id="newBill" placeholder="Bill name">
+      <input type="number" id="billAmount" placeholder="Amount">
+      <button onclick="addBill()">Add</button>
+    </div>
 
-  <div class="section">
-    <h2>Savings</h2>
-    <input type="number" id="savingsGoal" placeholder="Savings goal">
+    <div class="card">
+      <h2>Future Purchases</h2>
+      <ul id="purchaseList"></ul>
+      <input type="text" id="newPurchase" placeholder="Item name">
+      <input type="number" id="purchaseAmount" placeholder="Amount">
+      <button onclick="addPurchase()">Add</button>
+    </div>
+
+    <div class="card">
+      <h2>Savings Goal</h2>
+      <input type="number" id="savingsGoal" placeholder="Goal amount">
+    </div>
+
   </div>
 
 <script src="script.js"></script>
